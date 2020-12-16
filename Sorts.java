@@ -23,6 +23,6 @@ public class Sorts{
       }
       noswap = true;
     }
-    System.out.println(Arrays.toString(data));////Only for debug purposes. Get rid of
+    //System.out.println(Arrays.toString(data));////Only for debug purposes. Get rid of
   }
 }
