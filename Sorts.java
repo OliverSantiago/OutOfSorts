@@ -21,7 +21,8 @@ public class Sorts{
       if (noswap){
         break;
       }
+      noswap = true;
     }
-    System.out.println(Arrays.toString(data));
+    System.out.println(Arrays.toString(data));////Only for debug purposes. Get rid of
   }
 }
