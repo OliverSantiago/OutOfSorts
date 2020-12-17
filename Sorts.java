@@ -25,4 +25,18 @@ public class Sorts{
     }
     //System.out.println(Arrays.toString(data));////Only for debug purposes. Get rid of
   }
+
+  public static void selectionSort(int [] data){
+    int min = data[0];
+    for (int i = 0; i < data.length; i++){
+      min = data[i];
+      for (int k = i+1; k<data.length; k++){
+        if (data[k]<min){
+          min=data[k];
+        }
+      }
+      data[i]=min;
+    }
+    //System.out.println(Arrays.toString(data));
+  }
 }
