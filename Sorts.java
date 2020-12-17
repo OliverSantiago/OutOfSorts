@@ -27,16 +27,23 @@ public class Sorts{
   }
 
   public static void selectionSort(int [] data){
-    int min = data[0];
-    for (int i = 0; i < data.length; i++){
-      min = data[i];
-      for (int k = i+1; k<data.length; k++){
-        if (data[k]<min){
-          min=data[k];
+    if (data.length >0){
+      int min = data[0];
+      int index = 0;
+      for (int i = 0; i < data.length; i++){
+        min = data[i];
+        index = i;
+        for (int k = i+1; k<data.length; k++){
+          if (data[k]<min){
+            min=data[k];
+            index = k;
+          }
         }
+        int temp = data[i];
+        data[i]=min;
+        data[index]= temp;
       }
-      data[i]=min;
+      //System.out.println(Arrays.toString(data));
     }
-    //System.out.println(Arrays.toString(data));
   }
 }
