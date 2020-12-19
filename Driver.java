@@ -16,12 +16,12 @@ public class Driver{
     }
 
     if(args[1].equals("bubble")){
-      Sorts.selectionSort(randData);
+      Sorts.insertionSort(randData);
     }
     if(args[1].equals("test")){
       int[] randDataBubble = Arrays.copyOf(randData,randData.length);
       Arrays.sort(randData);
-      Sorts.selectionSort(randDataBubble);
+      Sorts.insertionSort(randDataBubble);
 
 
       if( Arrays.equals(randData,randDataBubble)){
