@@ -46,4 +46,42 @@ public class Sorts{
       //System.out.println(Arrays.toString(data));
     }
   }
+
+  public static void insertionSort(int[] data){
+    if (data.length > 0){
+      int current = 0;
+      int index = 0;
+      int currentindex = 0;
+      boolean shouldcontinue = false;
+      for (int i = 1; i < data.length; i++){
+        current = data[i];
+        currentindex = i;
+        int previousonebiger = 1000000000;
+        shouldcontinue = false;
+        for (int k = 0; k <= i; k++){
+            if (current<data[k]&&data[k]<previousonebiger){
+              index = k;
+              previousonebiger = data[k];
+              shouldcontinue = true;
+            }
+        }
+        if (shouldcontinue){
+          int[] newdata = new int[currentindex-index];
+          int tempindex = 0;
+          for (int k = index; k < currentindex; k++){
+            newdata[tempindex]=data[k];
+            tempindex++;
+          }
+          data[index]=current;
+          tempindex = 0;
+          for (int k = index+1; k <= currentindex; k++){
+            data[k]=newdata[tempindex];
+            tempindex++;
+          }
+        }
+      }
+    }
+    //System.out.println(Arrays.toString(data));
+    //return data;
+  }
 }
